@@ -1,0 +1,10 @@
+BDD wokflow : 
+1) bussiness owner tells buissness analyst about his requirements 
+
+2) BA, Dev, QA, PO meets to discuss requiremnet (user stories) and explore with example to define the system behaviour
+
+3) the example are documented using a specification language like gherkin that can be used for dev and automation 
+
+4) automation 
+
+4) test execution, bug fixing, retesting 

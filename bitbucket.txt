@@ -1,0 +1,190 @@
+Git.    Version control system 
+	
+configure your system with git 
+give user name ,email 
+
+1) **git config --global user.name "shubham"
+
+2) **git config --global user.email "shubham.rajendra-jadhav@capgemini.com"
+
+
+3) to create local repository enter command  "git init"   @ location of project 
+   **git init 
+
+4) add code to staging area in local machine initiated using git init 
+
+  **git add*  -to add all files to staging area
+  **git add filename - to add specific file to staging area
+  
+5)  **git status - this command shows how many files are added to staging area 
+	
+6) git commit -m "first commit"   now your code is commited and ready to push 
+
+7) git remote add origin https://github.com/Sjadhav0802/pyselenium.git         - it add address of remote repository in origin 
+
+8) git push  origin master    -push code to remote repo successfully 
+	
+
+i have 
+
+
+  *****GIt and BITBUCKET bye rahul shetty *** 
+  inspire bitbucket key : CMNAEL9N13RYAUYC8KXT9Q1P
+  
+ Git is version controll system it works locally 
+ BITBUCKET is remoted repository just like github,azurerepo 
+ 
+ main diff between cmd prompt and gitbash is  bash accepts linux, unix , windows all commands it is independent of operating system
+ 
+ 
+ Working directory  -> staging area -> repository  ->   remote repository (head)
+               git add -> .   git commit -> . git push -> ....
+			   
+git config 
+git add 
+git status
+git commit 
+git clone 
+git push 
+git pull 
+
+git clean -f  : remove unneceesary files forcefully 
+
+git log : it will show commit history
+
+head-> main(branch name)   ie pointing or avialble to local repository  
+origin -> branch name      ie available in remote repo 
+
+
+* how to give access of workspace and repository to new team members 
+-> go to workspace -> workspace settings -> user groups -> new group or select group-> add member by enetring email of new team member-> confirm. 
+   now team member will recieve one invitation and he has to accept it to access the workspace 
+   
+-> go to repository -> repository settings -> user and groups access -> new group or select group-> add member by enetring email of new team member-> confirm. 
+   now team member will recieve one invitation and he has to accept it to access the repository 
+   
+   Branching concept:
+1)   git checkout -b branchname : it will create new branch with branch name 
+2)   git branch   : it will show all available branches
+3)   git checkout branchname :  it will change branch to branchname 
+4)   git reset   : gets all changes moved from staging to working directory 
+5)   git reset --soft HEAD~1 : all changes fall back to staging and commit is removed 
+6)	 git reset --hard HEAD~1 : all changes willbe deletd permonantly and commit will be removesd 
+7)   git reset --soft head 4a7f73760b9dc6eeacddc6af90ccf3801ad65a54  using commit id we can go back up to to specific commit 
+8)   git reset --hard  4a7f73760b9dc6eeacddc6af90ccf3801ad65a54
+9)   git reflog   : it will show all history of repository
+
+
+Merge : 
+1) when all the changes in the code occures on differnt lines or in different files, 
+   Git will successfully merge commits without your help
+   in this case git do auto merge but we can do manual merge also , 
+   manual merge is good practice 
+2)but you will run into merge conflicts when same line of the code which you changed
+   are already changed by others after you cut the branch 
+
+3) before merge your branch should have latest changes made in main branch  
+ 
+ always follow below steps to manually merge 
+ if any conflicts are present it will give message or it will merge successfully 
+ git checkout main
+ git pull 
+ git checkout branch
+ git merge main 
+ 
+ 4) rebase 
+   git checkout main
+   git pull 
+   git checkout branch
+   git rebase main
+   
+   in case of rebase it doesent show an extra commit of merging 
+   
+
+Squash : combining multiple commit into one single commit 
+       
+	    git rebse -i Head~2    this command will take you to vi editor 
+							keep one commit as pick and make other commits as squash 
+							press escape :wq  it will take you out and open other vi 
+							give one common name for this all commits and all set 
+							push code to repo it will remove previous commit history for 2 commits and show new commit 
+					        give -f to forcefully push 
+							
+Advanced Git workflows:
+1) if we want to add another file or changes in very previous commit then use :git commit --amend
+   also used to edit previous commit
+   :git commit --amend
+   
+   git commit --amend -m "new commit message"  : it will change previous commit message and add changes to that commit if changes available in staging area 
+   
+   
+2)git show : it shows the changes made in last commit 
+
+git status: it shows what files are changed 
+git diff : It shows what content of files is chenged
+
+git stash : save working directoey without commit
+git stash pop : to pop all changes back
+
+git blame filename : this command will show all history of file with its content 
+eg. 
+commit id  author date time  code line 1
+							 code line 2 
+							 .
+commit id  author2 date time code line xyz 							 .
+							 
+which line of code is changed by whom at which time can be seen using this command 
+
+
+git revert #commitID  : commit will be reverted from public remote repository
+
+SSH key stands for secure shell kay - private key (local), public key(bit -bucket) 
+
+ssh-keygen   : it generate public and private key 
+
+diff between git pull and fetch 
+
+git fetch downloads all the latest commits from all the
+new branches and all the branches and all the new branches from the remote and saves it in the local repository
+but it wont merge it to local branch you are working on
+
+it means git fetch will never change your working state 
+
+latest content can be viewed by beolow command 
+git checkout origin/branchname    : after fetch it will show changes present in remote repo
+
+
+Git pull : It downloads all the latest commits from all the branches and 
+all the new branches from the remote AND merge(copy) those changes to the 
+local branch you are working on 
+
+git pull is a combination of git fetch and git merge origin/branchname 
+
+Git tagging :
+
+
+
+
+Git clone and git fork :
+tagging lets developers mark important checkpoints in the cource of their projects developement 
+
+create git tag : git tag tagname
+
+verify gir tags created : git tag  : it will show all tags created 
+
+create tag with message- git tag -a tagname -m "message"
+
+push tag - git push --tags
+
+
+
+Source tree: 
+it is product of atlassian 
+you can use git user interface using source tree application 
+
+
+JIRA with bitbucket:
+
+1) starting from required gathering to deploayement you can track everything using jira
+
+ 

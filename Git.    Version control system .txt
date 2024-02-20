@@ -1,0 +1,39 @@
+Git.    Version control system 
+	
+configure your system with git 
+give user name ,email 
+
+1) **git config --global user.name "shubham"
+
+2) **git config --global user.email "shubham.rajendra-jadhav@capgemini.com"
+
+
+3) to create local repository enter command  "git int"   @location of project 
+   **git init 
+
+4) add code to staging area in local machine initiated using git init 
+
+  **git add*  -to add all files to staging area
+  **git add filename - to add specific file to staging area
+  
+5)  **git status - this command shows how many files are added to staging area 
+	
+6) git commit -m "first commit"   now your code is commited and ready to push 
+
+7) git remote add origin https://github.com/Sjadhav0802/pyselenium.git         - it add address of remote repository in origin 
+
+8) git push  origin master    -push code to remote repo successfully 
+	
+
+i have 
+
+
+GIt and BITBUCKET bye rahul shetty   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
+in medical lifescience quality is first and other things is second 
+
+
+12:27:01 git import for: https://github.com/Sjadhav0802/Demotestorangehrm.git
+12:27:01 Cloning https://github.com/Sjadhav0802/Demotestorangehrm.git...
+12:27:01 Remote Git clone failed: <class 'bitbucket.apps.asyncx.tasks.RepoImportTask.ImportException'>: Command failed. Return value: 128
+
+CMNAEL9N13RYAUYC8KXT9Q1P
